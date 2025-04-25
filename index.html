@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  
+  <style>
+   
+
+    .scbtn {
+
+        padding: 10px 10px;
+        border-radius: 100px;
+        background-color: white;
+        color: black;
+        border: none;
+        position: fixed;
+        bottom: 50px;
+        right: 20px;
+        opacity: 0;
+
+    }
+</style>
+
+
+</head>
+
+<body>
+
+  <button class="scbtn" onclick="btnUp()">0%</button>
+
+    <script>
+
+        let scbtn = document.querySelector('.scbtn');
+
+        scbtn.style.transition = ".6s ease"
+        window.addEventListener("scroll", function () {
+
+            let scrollVar = window.scrollY;
+            let totalHigth = document.documentElement.scrollHeight - window.innerHeight;
+            let finalVar = Math.floor((scrollVar / totalHigth) * 100)
+
+            scbtn.textContent = finalVar + "%";
+
+            if (window.scrollY > 300) {
+
+                scbtn.style.bottom = "20px";
+                scbtn.style.opacity = "1"
+
+            }
+
+            else {
+
+                scbtn.style.bottom = "50px";
+                scbtn.style.opacity = "0"
+
+
+            }
+
+        })
+
+        function btnUp() {
+            window, scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+    </script>
+
+
+  <div class="container-fluid fi-sec overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <nav class="navbar navbar-expand-lg  py-3" data-bs-theme="dark">
+          <div class="container">
+            <a class="navbar-brand text-white" href="#"><img src="logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#HOME">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#ABOUT US">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#INVESTMENT">Experts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page"
+                    href="#AFFILIETPROGRAM">Schedule</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#Help">Tickets</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#Help">Gallery</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-md-4 fw-bold text-white" aria-current="page" href="#Help">News</a>
+                </li>
+
+              </ul class="navbar-nav mb-2 mb-lg-4">
+              <div style="border: 2px solid blue;border-radius: 30px;padding: 8px;text-align: center;"
+                class="col-md-2 sc-btn text-white fw-bold">BUY TICKET</div>
+            </div>
+          </div>
+        </nav>
+        <div id="carouselExampleFade" class="carousel slide ">
+          <div class="carousel-indicators">
+            <button style="height: 10px !important;width: 10px !important;border-radius: 100%;background-color:white;"
+              type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active indi btn-3"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button style="height: 10px !important;width: 10px !important;border-radius: 100%;background-color:white;"
+              type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" class="indi btn-3"
+              aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column">
+                  <span
+                    style="color: #ffffff;background-color:#0072FF33;border-radius: 20px;padding: 10px 24px;">
+                    <i class="bi bi-calendar" style="color: blue;"></i> December 3rd 7th <span> <i
+                        class="bi bi-geo-alt-fill" style="color: blue;"></i> Los Angeles, California</span> </span>
+                  <h1 class="fi-text">Autovent 2023</h1>
+                  <p style="color: #ffffff80;">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis
+                    laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore id do eiusmod.
+                    Lorem ipsum non labore.</p>
+                  <!-- From Uiverse.io by Spacious74 -->
+                  <button class="ms-3 button-2  fw-bold fs-3" style="padding: 12px 24px;" id="btn-2">GET TICKET</button>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                  <img src="car-2.png" style="height: 450px;object-fit: contain;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column">
+                  <span
+                    style="color: #ffffff;background-color: rgba(0, 0, 255, 0.096);border-radius: 20px;padding: 10px 24px;">
+                    <i class="bi bi-calendar" style="color: blue;"></i> December 3rd 7th <span> <i
+                        class="bi bi-geo-alt-fill" style="color: blue;"></i> Los Angeles, California</span> </span>
+                  <h1 class="fi-text">The Future of Automotive</h1>
+                  <p style="color: #ffffff80;">Aute esse non magna elit dolore dolore dolor sit est. Ea occaecat ea duis
+                    laborum reprehenderit id cillum tempor cupidatat qui nisi proident nostrud dolore id do eiusmod.
+                    Lorem ipsum non labore.</p>
+                  <!-- From Uiverse.io by Spacious74 -->
+                  <button class="ms-3 button-2 fw-bold fs-3" style="padding: 12px 24px;" id="btn-2">GET TICKET</button>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                  <img src="car-3.png" style="height: 450px;object-fit: contain;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid py-5 bg-black overflow-hidden">
+    <div class="row flex-nowrap overflow-hidden">
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">SUZUKI
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">HONDA
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">FORD
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">AUDI
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">BMW
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">RANGE
+          ROVER</h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">JEEP
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <h1 style="font-size: 50px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">TOYOTA
+        </h1>
+      </div>
+      <div class="col-lg-2 slider d-flex align-items-center justify-content-center">
+        <span style="height: 7px;width: 100px;background: rgba(58, 54, 161, 0.568);
+         background: linear-gradient(86deg, rgba(46, 255, 57, 0.469) 40%, rgb(0, 89, 255) 100%);display: flex;"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 bg-black py-5 overflow-hidden">
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <span style="color: #ffffffbf;font-size: 32px;">Welcome to a world where engineering marvels and artistic design
+          collide, where innovation takes center stage, and where the passion for automotive excellence is on full
+          display. Step into the realm of our mesmerizing car exhibition, an immersive journey through the evolution of
+          automotive technology, style, and performance.</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 bg-black">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex align-items-center justify-content-center" style="position: relative;">
+
+          <img src="car-1.jpg" style="height: 100%;width: 100%;object-fit: cover;" alt="">
+          <img class="ak" src="dotted.png" style="position: absolute;left: 0;bottom: 190px;" alt="">
+
+        </div>
+        <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column"
+          style="background-image: url(circle-gradient\ \(1\).png);background-size: cover;background-repeat: no-repeat;">
+          <h1 class="font-1 display-4 fw-bold" style="color: #ffffff;">WELCOME TO THE <span
+              style="-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">BIGGEST</span>
+            <span style="color: blue;">AUTO</span>
+            <span class="fi-text-1">EVENT</span>
+            <span>2023</span>
+          </h1>
+          <div class="d-flex">
+            <img src="arrow-up-left.png" style="height: 100px;" alt="">
+            <p style="color: #ffffff80;" class="ms-3">Autovent a celebration of human ingenuity and a testament to the
+              ever-evolving landscape of transportation. From sleek aerodynamics to revolutionary sustainable solutions,
+              each exhibit embodies the spirit of progress that propels the automotive industry forward.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 bg-black overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 d-flex align-items-center justify-content-center flex-column"
+          style="background-image: url(circle-gradient\ \(1\).png);height: 300px;background-size: contain;background-repeat: no-repeat;background-position: center;">
+          <h1 class="fi-text" style="font-size: 100px;">150</h1>
+          <span style="color: #ffffff;font-size: 20px;text-align: center;font-weight: bold;">Automotive <br>
+            Brands</span>
+        </div>
+        <div class="col-lg-3  col-md-6 d-flex align-items-center justify-content-center flex-column"
+          style="background-image: url(circle-gradient-2.png);height: 300px;background-size: contain;background-repeat: no-repeat;background-position: center;">
+          <h1 style="font-size: 100px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">32
+          </h1>
+          <span style="color: #ffffff;font-size: 20px;text-align: center;font-weight: bold;">Countries <br>
+            Participated</span>
+        </div>
+        <div class="col-lg-3  col-md-6 d-flex align-items-center justify-content-center flex-column"
+          style="background-image: url(circle-gradient\ \(1\).png);height: 300px;background-size: contain;background-repeat: no-repeat;background-position: center;">
+          <h1 class="fi-text" style="font-size: 100px;">12</h1>
+          <span style="color: #ffffff;font-size: 20px;text-align: center;font-weight: bold;"> Automotive <br> Figures
+          </span>
+        </div>
+        <div class="col-lg-3 col-md-6  d-flex align-items-center justify-content-center flex-column"
+          style="background-image: url(circle-gradient-2.png);height: 300px;background-size: contain;background-repeat: no-repeat;background-position: center;">
+          <h1 style="font-size: 100px;-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">5
+          </h1>
+          <span style="color: #ffffff;font-size: 20px;text-align: center;font-weight: bold;">Days <br> Expo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid py-5 bg-black overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex align-items-start justify-content-center flex-column"
+          style="background-image: url(circle-gradient-2.png);background-size: contain;background-repeat: no-repeat;">
+          <h1 class="font-1" style="color: #ffffff;font-size: 55px;font-weight:550;">PRESENTING<br>
+            <span style="-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;">EXPERTS</span>
+            <span>IN THE</span>
+            <span class="fi-text-1">AUTOMOTIVE</span> <br>
+            <span>INDUSTRY</span>
+          </h1>
+          <div class="d-flex">
+            <img src="arrow-up-right.png" style="height: 70px;" alt="">
+            <p style="color: #ffffffbf;" class="ms-3">Roam the aisles filled with gleaming automobiles, interact with
+              industry experts who breathe life into mechanical marvels with their knowledge, and immerse yourself in
+              the symphony of engines, all united in the pursuit of pushing boundaries and exceeding expectations.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 py-4" data-aos="fade-left" data-aos-offset="200" data-aos-delay="150"
+          data-aos-duration="1800">
+          <div class="row py-3">
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="1 (1).jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+              style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+              MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="2 (1).jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+            style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+            MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="3.jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+          style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+          MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="4 (1).jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+        style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+        MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box hhb col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="5.jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+      style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+      MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="6.jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+    style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+    MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="7.jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+  style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+  MUSK</span> -->
+            </div>
+
+            <div class="col-md-3  sevan-box col-6 py-2 d-flex justify-content-center align-items-center"
+              style="position: relative;overflow: hidden;border: 1px solid rgb(0, 0, 0);">
+              <img style="height: 140px;width: 100%;object-fit: cover;" src="8.jpg" alt="">
+              <!-- <span class="fw-bold text-white text-center"
+style="position: absolute;left: 11px; background-color: blue;bottom: 0;padding: 2px 23px;font-size: 14px;">Elon
+MUSK</span> -->
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-black py-5 overflow-hidden"
+    style="background-image: url(4.jpg);background-size: contain;background-repeat: no-repeat;background-attachment: fixed;">
+    <div class="container">
+      <div class="row">
+        <h2 class="fi-text-1 text-center display-5 fw-bold"><span
+            style="-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;background-color: transparent;">Event</span>
+          SCHEDULE </h1>
+          <div class="w-100 saven-div">
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-lg-2 col-md-6 col-4 d-flex align-items-center justify-content-center flex-column"
+                style="border-radius: 50px 0 0 50px;border: 1px solid gray;">
+                <h1 class="text-white fw-bold fs-4">DAY 1</h1>
+                <span class="text-white fw-bold">Dec 3, 2023</span>
+              </div>
+              <div class="col-lg-2 col-md-6 col-4 d-flex align-items-center justify-content-center flex-column"
+                style="border: 1px solid gray;">
+                <h1 class="text-white fw-bold fs-4">DAY 2</h1>
+                <span class="text-white fw-bold">Dec 3, 2023</span>
+              </div>
+              <div class="col-lg-2 col-md-6 col-4 d-flex align-items-center justify-content-center flex-column"
+                style="border: 1px solid gray;">
+                <h1 class="text-white fw-bold fs-4">DAY 3</h1>
+                <span class="text-white fw-bold">Dec 3, 2023</span>
+              </div>
+              <div class="col-lg-2 col-md-6 col-4 d-flex align-items-center justify-content-center flex-column"
+                style="border: 1px solid gray;">
+                <h1 class="text-white fw-bold fs-4">DAY 4</h1>
+                <span class="text-white fw-bold">Dec 3, 2023</span>
+              </div>
+              <div class="col-lg-2 col-md-6 col-4 d-flex align-items-center justify-content-center flex-column"
+                style="border-radius: 0 50px 50px 0;border: 1px solid gray;">
+                <h1 class="text-white fw-bold fs-4">DAY 5</h1>
+                <span class="text-white fw-bold">Dec 3, 2023</span>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5 py-5">
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <span class="text-white mt-5">08:00 - 12:00 AM</span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <img src="5.jpg" style="height: 100px;width: 100px;object-fit: contain;box-shadow: 10px 10px 0px blue;"
+                alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex align-items-start justify-content-center flex-column">
+              <span class="text-white fw-bold">Kizzie Mertz</span>
+              <p style="color: #02D982;">Founder & CEO</p>
+              <h1 class="text-white fs-5 fw-bold">How EVs are Transforming the Automotive Landscape</h1>
+              <p style="color: #ffffff80;">Get ready to your excitement and fuel your passion for all things automotive
+                at this year's highly anticipated car event! Buckle up andget ready to immerse yourself in the
+                captivating world of cars!</p>
+            </div>
+          </div>
+          <div class="row mt-5 py-5" style="background-color: rgba(0, 114, 255, 0.5);">
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <span class="text-white mt-5">08:00 - 12:00 AM</span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <img src="6.jpg" style="height: 100px;width: 100px;object-fit: contain;box-shadow: 10px 10px 0px blue;"
+                alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex align-items-start justify-content-center flex-column">
+              <span class="text-white fw-bold">Kizzie Mertz</span>
+              <p style="color: #02D982;">Founder & CEO</p>
+              <h1 class="text-white fs-5 fw-bold">How EVs are Transforming the Automotive Landscape</h1>
+              <p style="color: #ffffff80;">Get ready to your excitement and fuel your passion for all things automotive
+                at this year's highly anticipated car event! Buckle up andget ready to immerse yourself in the
+                captivating world of cars!</p>
+            </div>
+          </div>
+          <div class="row mt-5 py-5">
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <span class="text-white mt-5">08:00 - 12:00 AM</span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <img src="7.jpg" style="height: 100px;width: 100px;object-fit: contain;box-shadow: 10px 10px 0px blue;"
+                alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex align-items-start justify-content-center flex-column">
+              <span class="text-white fw-bold">Kizzie Mertz</span>
+              <p style="color: #02D982;">Founder & CEO</p>
+              <h1 class="text-white fs-5 fw-bold">How EVs are Transforming the Automotive Landscape</h1>
+              <p style="color: #ffffff80;">Get ready to your excitement and fuel your passion for all things automotive
+                at this year's highly anticipated car event! Buckle up andget ready to immerse yourself in the
+                captivating world of cars!</p>
+            </div>
+          </div>
+          <div class="row mt-5 py-5" style="background-color: rgba(0, 114, 255, 0.5);">
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <span class="text-white mt-5">08:00 - 12:00 AM</span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-6 d-flex align-items-start justify-content-start flex-column">
+              <img src="1 (1).jpg"
+                style="height: 100px;width: 100px;object-fit: contain;box-shadow: 10px 10px 0px blue;" alt="">
+            </div>
+            <div class="col-lg-6 col-md-12 col-12 d-flex align-items-start justify-content-center flex-column">
+              <span class="text-white fw-bold">Kizzie Mertz</span>
+              <p style="color: #02D982;">Founder & CEO</p>
+              <h1 class="text-white fs-5 fw-bold">How EVs are Transforming the Automotive Landscape</h1>
+              <p style="color: #ffffff80;">Get ready to your excitement and fuel your passion for all things automotive
+                at this year's highly anticipated car event! Buckle up andget ready to immerse yourself in the
+                captivating world of cars!</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-black py-5 overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <h1 style="color: white;text-align: center;font-weight: bold;" class="mb-3 display-1 font-1">GET <span
+            class="fi-text-1 fw-bold">TICKET</span></h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="col-12  py-5 d-flex align-items-center justify-content-center flex-column"
+            style="background: rgb(31,2,255);background: linear-gradient(140deg, rgba(31,2,255,1) 10%, rgba(0,0,0,1) 24%, rgba(0,0,0,1) 74%, rgba(0,255,248,1) 90%);">
+            <h1 class="text-white fw-bold">ONE DAY</h1>
+            <span style="color: #0072FF;font-weight: bold;font-size: 22px;">TICKET</span>
+            <h1 style="color: white;font-size: 25px;">$ <span style="font-size: 70px;">49</span></h1>
+            <div class="col-10 d-flex align-items-start justify-content-start flex-column">
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Ticket for one day</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Chance to win doorprize</span>
+              <strike
+                style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;color: #ffffffbf;">
+                <i class="bi bi-x fw-bold fs-4" style="color: #ffffffe5;"></i> Free merchandise</strike>
+              <strike
+                style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;color: #ffffffbf;">
+                <i class="bi bi-x fw-bold fs-4" style="color: #ffffffe5;"></i> Free vouchers</strike>
+              <strike
+                style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;color: #ffffffbf;">
+                <i class="bi bi-x fw-bold fs-4" style="color: #ffffffe5;"></i> Meet the guest stars</strike>
+            </div>
+            <div class="col-10 d-flex align-items-start justify-content-start">
+              <img src="arrow-up-right.png" class="mt-3" style="height: 70px;" alt="">
+              <button class="button-2 ms-3 mt-2" id="btn-2">BUY TICKET</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="col-12  py-5 d-flex align-items-center justify-content-center flex-column"
+            style="background: rgb(31,2,255);background: linear-gradient(140deg, rgba(31,2,255,1) 10%, rgba(0,0,0,1) 24%, rgba(0,0,0,1) 74%, rgba(0,255,248,1) 90%);">
+            <h1 class="text-white fw-bold">ONE DAY</h1>
+            <span style="color: #0072FF;font-weight: bold;font-size: 22px;">TICKET</span>
+            <h1 style="color: white;font-size: 25px;">$ <span style="font-size: 70px;">89</span></h1>
+            <div class="col-10 d-flex align-items-start justify-content-start flex-column">
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Ticket for one day</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Chance to win doorprize</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Free merchandise</span>
+              <strike
+                style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;color: #ffffffbf;">
+                <i class="bi bi-x fw-bold fs-4" style="color: #ffffffe5;"></i> Free vouchers</strike>
+              <strike
+                style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;color: #ffffffbf;">
+                <i class="bi bi-x fw-bold fs-4" style="color: #ffffffe5;"></i> Meet the guest stars</strike>
+            </div>
+            <div class="col-10 d-flex align-items-start justify-content-start">
+              <img src="arrow-up-right.png" class="mt-3" style="height: 70px;" alt="">
+              <button class="button-2 ms-3 mt-2" id="btn-2">BUY TICKET</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="col-12  py-5 d-flex align-items-center justify-content-center flex-column"
+            style="background: rgb(31,2,255);background: linear-gradient(140deg, rgba(31,2,255,1) 10%, rgba(0,0,0,1) 24%, rgba(0,0,0,1) 74%, rgba(0,255,248,1) 90%);">
+            <h1 class="text-white fw-bold">ONE DAY</h1>
+            <span style="color: #0072FF;font-weight: bold;font-size: 22px;">TICKET</span>
+            <h1 style="color: white;font-size: 25px;">$ <span style="font-size: 70px;">109</span></h1>
+            <div class="col-10 d-flex align-items-start justify-content-start flex-column">
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Ticket for one day</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Chance to win doorprize</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Free merchandise</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Free vouchers</span>
+              <span style="color: white;font-size: 17px;display: flex;align-items: center;justify-content: center;"> <i
+                  class="bi bi-check fw-bold fs-4" style="color: #0072FF;"></i> Meet the guest stars</span>
+            </div>
+            <div class="col-10 d-flex align-items-start justify-content-start">
+              <img src="arrow-up-right.png" class="mt-3" style="height: 70px;" alt="">
+              <!-- From Uiverse.io by zjssun -->
+              <button class="button-2 ms-3 mt-2" id="btn-2">BUY TICKET</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-black py-5 overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class=" d-flex align-items-center justify-content-center">
+          <h1 style="-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;text-align: center;"
+            class="display-1 fw-bold">What</h1>
+          <h1 class="fi-text-1 ms-3 fw-bold display-1">THEY</h1>
+          <h1 class="text-white ms-3 fw-bold display-1">SAYS</h1>
+        </div>
+      </div>
+      <div class="row flex-nowrap overflow-hidden">
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-6 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-12 slider-card">
+          <div class="col-12 slider-card py-5  d-flex align-items-start justify-content-center flex-column"
+            style="position: relative;border: 2px solid #0072FF;border-radius: 10px;">
+            <i class="bi bi-quote display-1 fi-text-1"
+              style="transform: rotate(180deg);position: absolute;top: 0;right: 0;"></i>
+            <p class="text-white ms-2" style="z-index: 1111;font-size: 16px;">Attending the automotive event was a dream
+              come
+              true for me. The thrill of seeing rare and iconic cars up close was unforgettable. From vintage classics
+              to cutting-edge supercars.</p>
+            <div class="col-12 d-flex ms-2">
+              <img src="main-1.jpg" style="height: 50px;width: 50px;border-radius: 50%;" alt="">
+              <span style="color: white;align-items: center;justify-content: center;display: flex;font-size: 16px;"
+                class="ms-2">Michael S. (Car Enthusiast)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex align-items-center justify-content-center mt-4">
+        <span style="width: 5px;background-color: #ffffff;height: 5px;transition: .3s linear;border-radius:100px;"
+          onclick="slidefun(0)" class="btn-1"></span>
+        <span style="width: 5px;background-color: #ffffff;height: 5px;transition: .3s linear;border-radius:100px;"
+          onclick="slidefun(1)" class="btn-1 ms-2"></span>
+        <span style="width: 5px;background-color: #ffffff;height: 5px;transition: .3s linear;border-radius:100px;"
+          onclick="slidefun(2)" class="btn-1 ms-2"></span>
+        <span style="width: 5px;background-color: #ffffff;height: 5px;transition: .3s linear;border-radius:100px;"
+          onclick="slidefun(3)" class="btn-1 ms-2"></span>
+        <span style="width: 5px;background-color: #ffffff;height: 5px;transition: .3s linear;border-radius:100px;"
+          onclick="slidefun(4)" class="btn-1 ms-2"></span>
+      </div>
+
+      <script>
+
+        let slidercard = document.getElementsByClassName('slider-card')
+        let sliderIndex = ['0%', '-25%', '-50%', '-75%', '-0%'];
+        slidercard[0].style.transition = ".3s linear"
+        slidercard[1].style.transition = ".3s linear"
+        slidercard[2].style.transition = ".3s linear"
+        slidercard[3].style.transition = ".3s linear"
+        slidercard[4].style.transition = ".3s linear"
+        slidercard[5].style.transition = ".3s linear"
+        slidercard[6].style.transition = ".3s linear"
+
+        function slidefun(index) {
+          slidercard[0].style.marginLeft = sliderIndex[index];
+        }
+
+      </script>
+
+    </div>
+  </div>
+
+  <div class="container-fluid py-5 bg-black overflow-hidden"
+    style="background-image: url(2-flip.jpg);background-size: contain;background-repeat: no-repeat;background-attachment: fixed;">
+    <div class="container">
+      <div class="row">
+        <h1 class="mb-5 font-1" style="text-align: center;color: #ffffff;font-weight: bold;">OUR<span
+            class="fi-text-1 ms-2 font-1">GALLERY</span></h1>
+      </div>
+      <div class="row">
+
+        <style>
+          .bg-box {
+            background: url(main-2.jpg);
+            background-size: contain;
+            height: 100%;
+            width: 60%;
+            background-repeat: no-repeat;
+            /* border: 2px solid red; */
+          }
+
+          .box {
+            width: 20%;
+            cursor: pointer;
+            height: 100%;
+           
+          }
+
+          .box img {
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            /* align-items: center;
+            justify-content: space-around;
+            display: flex; */
+
+          }
+        </style>
+
+        <div class="col-7 bg-box mx-auto" style="height: 70vh;" id="bgg"></div>
+        <div class="col-md-8 mt-3 d-flex align-items-center justify-content-evenly mx-auto" style="height: 14vh;">
+          <div class="box p-2" onclick="bgChanged(0)">
+            <img src="main-2.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+          <div class="box p-2" onclick="bgChanged(1)">
+            <img src="main-3.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+          <div class="box p-2" onclick="bgChanged(2)">
+            <img src="main-4.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+          <div class="box p-2" onclick="bgChanged(3)">
+            <img src="main-5.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+          <div class="box p-2" onclick="bgChanged(4)">
+            <img src="main-6.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+          <div class="box p-2" onclick="bgChanged(5)">
+            <img src="main-7.jpg" style="height: 100%;width: 100%;object-fit: contain;background-repeat: no-repeat;"
+              alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let bgChangerBox = document.getElementById('bgg');
+    let bgInd = [
+      "url(main-2.jpg)",
+      "url(main-3.jpg)",
+      "url(main-4.jpg)",
+      "url(main-5.jpg)",
+      "url(main-6.jpg)",
+      "url(main-7.jpg)"];
+
+    function bgChanged(index) {
+      bgChangerBox.style.transition = ".4s ease"
+      bgChangerBox.style.background = bgInd[index];
+      bgChangerBox.style.backgroundSize = "cover";
+    }
+
+  </script>
+
+  <div class="container-fluid bg-black py-5 overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="div-data d-flex align-items-center justify-content-center">
+          <h1 class="font-1"
+            style="-webkit-text-stroke: 1px white;color: transparent;text-transform: uppercase;text-align: center;font-weight: bold;">
+            OUR </h1>
+          <h1 class="font-1 fi-text-1 text-center ms-3 fw-bold">SPONSORS</h1>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-1.png" class="img-2 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-2.png" class="img-2 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-3.png" class="img-2 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-4.png" class="img-1 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-5.png" class="img-1 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+        <div class="col-lg-2 col-6 p-2 ">
+          <img src="logo-6.png" class="img-1 p-4"
+            style="height: 100%;width: 100%;object-fit: cover;background: #3F5EFB;border: 1px solid gray;
+              background: linear-gradient(339deg, rgba(63, 94, 251, 0.89) 20%, rgba(252, 70, 107, 0) 43%);border: 1px solid rgba(248, 244, 244, 0.289)"
+            alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-black py-5 overflow-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="roww">
+          <h1 style="color: white;font-weight: bold;text-align: center;">GETTING <span class="fi-text-1">THERE</span>
+          </h1>
+        </div>
+        <div class="col-lg-12 mt-5">
+          <iframe style="height: 60vh;width: 100%;"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6611.3832984676055!2d-118.243417!3d34.05178!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c648d9808fbd%3A0xb79dfbc6ae338c12!2s100%20Main%20St%2C%20Los%20Angeles%2C%20CA%2090012%2C%20USA!5e0!3m2!1sen!2sid!4v1744696845209!5m2!1sen!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="row mt-3 d-flex align-items-center justify-content-evenly">
+          <div class="col-lg-4 d-flex align-items-center justify-content-center flex-column">
+            <p style="color: #ffffffbf;">Location</p>
+            <h1 style="font-size: 20px;color: #ffffff;">100 S Main ST, Los Angeles, CA</h1>
+          </div>
+          <div class="col-lg-3 d-flex align-items-center justify-content-center flex-column ">
+            <p style="color: #ffffffbf;">Phone</p>
+            <h1 style="font-size: 20px;color: #ffffff;">+1 333 9296</h1>
+          </div>
+          <div class="col-lg-3 d-flex align-items-center justify-content-center flex-column ">
+            <p style="color: #ffffffbf;">Email</p>
+            <h1 style="font-size: 20px;color: #ffffff;">contact@suppport.com</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- I can't thank the organizers enough for putting together such an informative automotive event. The workshops and hands-on demonstrations were incredibly insightful. -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>
